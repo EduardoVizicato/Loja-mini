@@ -14,9 +14,6 @@ body{
     display:flex;
     flex-direction: wrap;
 }
-#produtos .img{
-    img: ""
-}
 #carrinho{
     max-width: 900px;
     margin: 0 auto;
@@ -54,6 +51,10 @@ h2{
     padding: 10px 0;
     text-align: center;
     color: #77ffc0;
+}
+.info-single-checkout{
+    border-bottom: 2px dotted;
+    padding: 10px 0 ;
 }
 @media screen and (max-width: 768px) { 
         .produto-single{

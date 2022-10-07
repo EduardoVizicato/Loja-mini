@@ -2,19 +2,19 @@ const items = [
     {
         id: 0,
         nome: 'camisetas',
-        img: 'shirt.jpg',
+        img: 'camisa1.jpg',
         quantidade: 0,
     },
     {
         id: 1,
         nome: 'shorts',
-        img: 'shirt.jpg',
+        img: 'shorts1.jpg',
         quantidade: 0,
     },
     {
         id: 2,
         nome: 'sapato',
-        img: "shirt.jpg",
+        img: "air.jpg",
         quantidade: 0,
     },
 ]
@@ -26,7 +26,7 @@ inicialiarLoja = () => {
         containerProdutos.innerHTML+= `
 
         <div class="produto-single">
-            <img src="`+val.camisa1+`" />
+            <img src="`+val.img+`" />
             <p>`+val.nome+`</p>
             <a key="`+val.id+`" href="#">adicionar ao carrinho!<a/>
         </div>
@@ -46,8 +46,10 @@ atualizarcarrinho = () => {
         if(val.quantidade > 0 ){
         containerCarrinho.innerHTML+= `
             <div class="info-single-checkout">
-            <p style>`+val.nome+`</p>
-            <hr>
+            <p style="float:left;">Produto: `+val.nome+`</p>
+            <p style="float:right;">Quantidade: `+val.quantidade+`</p>
+            <div style="clear:both"></div>
+            
             </div>
         `;
         }
